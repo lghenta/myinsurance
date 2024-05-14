@@ -1,12 +1,6 @@
 from django.db import models
 
-class HubSpotCredentials(models.Model):
-    client_id = models.CharField(max_length=255, default='b4e6aa6c-f0d2-4e63-99b5-6b6eeffec4bd')
-    client_secret = models.CharField(max_length=255, default='e671619f-9d9e-4d23-8f71-f85df6bd3d48')
-    access_token = models.CharField(max_length=512, blank=True, null=True)
 
-    def __str__(self):
-        return "HubSpot Credentials"
 
 class Contact(models.Model):
     name = models.CharField(max_length=255)
@@ -47,6 +41,8 @@ class APICallResult(models.Model):
 
     def __str__(self):
         return f"{self.endpoint} - Success: {self.successful} - Status: {self.status_code} - Time: {self.timestamp}"
+
+
 
 
 
