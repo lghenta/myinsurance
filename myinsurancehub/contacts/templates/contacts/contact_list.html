@@ -3,20 +3,17 @@
 {% block title %}Contact List{% endblock %}
 
 {% block content %}
-<h1>HubSpot Contacts</h1>
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Email</th>
-    </tr>
-    {% for contact in contacts %}
-    <tr>
-        <td>{{ contact.properties.firstname }} {{ contact.properties.lastname }}</td>
-        <td>{{ contact.properties.email }}</td>
-    </tr>
-    {% endfor %}
-</table>
+    <h1>HubSpot Contacts</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        {% for contact in contacts %}
+            <tr>
+                <td>{{ contact.properties.firstname }} {{ contact.properties.lastname }}</td>
+                <td>{{ contact.properties.email }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
-
-
-
